@@ -17,7 +17,8 @@ public class Notebook extends Computer implements MemoryInterface {
     }
 
     @CustomNotation
-    public int charge(int percents) {
-        return batteryCapacity;
+    public Notebook charge() {
+        System.out.println("Charging...");
+        return this;
     }
 }

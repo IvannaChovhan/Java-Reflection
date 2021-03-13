@@ -11,7 +11,7 @@ public class Main {
         // Отримуємо ім'я пакету
         Package pack = reflected.getPackage();
         String packageName = pack.getName();
-        System.out.println("Package = " + packageName);
+        System.out.println("Package: " + packageName);
 
         // Отримуємо суперклас
         Class reflectedSuperclass = reflected.getSuperclass();

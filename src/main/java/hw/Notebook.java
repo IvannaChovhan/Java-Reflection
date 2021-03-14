@@ -11,14 +11,26 @@ public class Notebook extends Computer implements MemoryInterface {
     private int batteryCapacity;
 
     @CustomNotation
-    public Notebook makePhoto() {
-        System.out.println("The photo was done");
-        return this;
+    public String makePhoto() {
+        return "The photo was done";
     }
 
     @CustomNotation
-    public Notebook charge() {
-        System.out.println("Charging...");
-        return this;
+    public String charge() {
+        return "Charging...";
+    }
+
+    public Notebook compareByDiagonal(Notebook n){
+        if (n.getDiagonal() > this.diagonal)
+            return n;
+        else
+            return this;
+    }
+
+    public Notebook compareByBattery(Notebook n){
+        if (n.getBatteryCapacity() > this.batteryCapacity)
+            return n;
+        else
+            return this;
     }
 }

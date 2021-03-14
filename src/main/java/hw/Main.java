@@ -58,7 +58,7 @@ public class Main {
         Computer comp = new Computer();
         MemoryInterface proxy = (MemoryInterface) SomeProxy.newProxyInstance(comp);
         System.out.println("Get memory result: " + proxy.getMemory());
-        proxy.setMemory(5);
+        //proxy.setMemory(5);
 
         //System.out.println(new Computer());
     }

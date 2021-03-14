@@ -67,9 +67,13 @@ public class Computer implements Switchable, MemoryInterface {
     public int getMemory(){
         return memory;
     }
+
     @Override
     public void setMemory(int memory){
-        this.memory = memory;
+        if (memory >= 0)
+            this.memory = memory;
+        else
+            this.memory = -memory;
     }
 
     @CustomNotation
@@ -78,6 +82,13 @@ public class Computer implements Switchable, MemoryInterface {
         memory = 0;
         System.out.println("Cleaned " + trash + "MB of memory\n");
         return trash;
+    }
+
+    public Computer compareByMemory(Computer c){
+        if (c.getMemory() > this.memory)
+            return c;
+        else
+            return this;
     }
 }
 
